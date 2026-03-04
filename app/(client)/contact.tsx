@@ -185,7 +185,7 @@ export default function ContactScreen() {
               {
                 icon: "mail-outline",
                 label: "Email",
-                value: "zxtaxation2023@gmail.com",
+                value: "teamzaidonn@gmail.com",
                 bg: "#E8F5E9",
                 color: "#059669",
               },

@@ -524,10 +524,6 @@ export default function HomeScreen() {
             <Ionicons name="call-outline" size={13} color={C.teal} />
             <Text style={s.footerContactTxt}>+91 7482049372</Text>
           </View>
-          <View style={s.footerContactItem}>
-            <Ionicons name="location-outline" size={13} color={C.teal} />
-            <Text style={s.footerContactTxt}>Hutton Road, Asansol</Text>
-          </View>
         </View>
 
         <View style={s.footerDivider} />
@@ -707,26 +703,10 @@ const CONTACTS = [
   {
     icon: "mail-outline",
     label: "Email",
-    val: "zxtaxation2023\n@gmail.com",
+    val: "teamzaidonn\n@gmail.com",
     color: "#059669",
     bg: "#F0FDF4",
-    url: "mailto:zxtaxation2023@gmail.com",
-  },
-  {
-    icon: "globe-outline",
-    label: "Website",
-    val: "www.zaidonn.com",
-    color: C.teal,
-    bg: "#ECFEFF",
-    url: "https://www.zaidonn.com",
-  },
-  {
-    icon: "location-outline",
-    label: "Address",
-    val: "Hutton Road,\nAsansol",
-    color: C.gold,
-    bg: "#FFFBEB",
-    url: undefined,
+    url: "mailto:teamzaidonn@gmail.com",
   },
 ];
 
