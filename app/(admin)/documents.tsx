@@ -70,6 +70,15 @@ export default function AdminDocumentsScreen() {
     queryKey: ["https://zaidonn.onrender.com/api/clients"],
   });
 
+  // ── Sort clients alphabetically by name ──────────────────────────────────
+  const sortedClients = clients
+    ? [...clients].sort((a, b) =>
+        (a.name || "").localeCompare(b.name || "", "en", {
+          sensitivity: "base",
+        }),
+      )
+    : [];
+
   const deleteMutation = useMutation({
     mutationFn: async (id: string) => {
       await apiRequest(
@@ -100,7 +109,7 @@ export default function AdminDocumentsScreen() {
 
   const pickFile = async () => {
     const result = await DocumentPicker.getDocumentAsync({
-      type: "application/pdf", // 👈 Sirf PDF allow karega
+      type: "application/pdf",
       copyToCacheDirectory: true,
     });
 
@@ -144,7 +153,7 @@ export default function AdminDocumentsScreen() {
       const res = await fetch(url.toString(), {
         method: "POST",
         headers: {
-          Authorization: `Bearer ${token}`, // 🔥 THIS WAS MISSING
+          Authorization: `Bearer ${token}`,
         },
         body: formData,
         credentials: "include",
@@ -321,14 +330,16 @@ export default function AdminDocumentsScreen() {
               showsVerticalScrollIndicator={false}
               keyboardShouldPersistTaps="handled"
             >
-              <Text style={styles.fieldLabel}>Client *</Text>
+              <Text style={styles.fieldLabel}>
+                Clients (Total clients-{sortedClients.length})
+              </Text>
               <ScrollView
                 horizontal
                 showsHorizontalScrollIndicator={false}
                 style={styles.chipScroll}
               >
                 <View style={styles.chipRow}>
-                  {clients?.map((c: any) => (
+                  {sortedClients.map((c: any) => (
                     <Pressable
                       key={c._id}
                       style={[
