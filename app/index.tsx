@@ -226,8 +226,8 @@ export default function HomeScreen() {
               </View>
             </View>
           </View>
-          {/* "TAXATION FARM" arc label */}
-          <Text style={s.sealArcText}>✦ TAXATION FARM ✦</Text>
+          {/* "TAXATION FIRM" arc label */}
+          <Text style={s.sealArcText}>✦ TAXATION FIRM ✦</Text>
         </Animated.View>
 
         {/* Brand name */}
@@ -497,7 +497,7 @@ export default function HomeScreen() {
           </View>
           <View>
             <Text style={s.footerBrand}>ZAIDONN</Text>
-            <Text style={s.footerFarm}>TAXATION FARM</Text>
+            <Text style={s.footerFarm}>TAXATION FIRM</Text>
           </View>
         </View>
 
@@ -530,7 +530,7 @@ export default function HomeScreen() {
         <Text style={s.footerCopy}>
           © 2026 Zaidonn Consult · All Rights Reserved
         </Text>
-        <Text style={s.footerCredit}>Made with ❤️ by Webwiz</Text>
+        <Text style={s.footerCredit}>Made with ❤️ by Faiz Hussain</Text>
       </View>
     </ScrollView>
   );
